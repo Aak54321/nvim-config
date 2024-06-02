@@ -1,24 +1,24 @@
-# My Neovim Configuration & Plugins
+# My $\color{blue}{\textsf{Neo}}$ $\color{Green}{\textsf{Vim}}$ Configuration & Plugins
 
 ---
 
-## Why Neovim?
+## Why $\color{blue}{\textsf{Neo}}$ $\color{Green}{\textsf{Vim}}$ ?
 
 > If you love to use the keyboard all day, why not? 💪  
 > Neovim makes mundane coding tasks more interesting. 🤯  
 > It offers customization like no other IDE. 🧑‍💻
 
-## Components of My Neovim Configuration
+## Components of My $\color{blue}{\textsf{Neo}}$ $\color{Green}{\textsf{Vim}}$ Configuration
 
 ### Package Manager
 
-- There are many choices out there, such as [vim-plug](), [dein](), [lazy](), and [packer]().
+- There are many choices out there, such as [vim-plug](https://github.com/junegunn/vim-plug), [dein](https://github.com/Shougo/dein.vim), [lazy](https://github.com/folke/lazy.nvim), and [packer](https://github.com/wbthomason/packer.nvim).
 - Among them, I personally love to use **Lazy** as a package manager due to its modularized plugin system, which makes plugin management easier.
 
 ### Color Scheme (Personal Preference)
 
 - A major fear or daunting feeling often arises due to its color scheme.
-- There are many color schemes out there, and I use [Catppuccin]() 😼.
+- There are many color schemes out there, and I use [Catppuccin](https://github.com/catppuccin/catppuccin).
 
 ### Syntax and Highlighting
 
@@ -36,13 +36,17 @@
 ### Language Server Protocol (LSP)
 
 - LSPs are essential in Neovim, communicating with a language server that provides real-time suggestions, code actions, definitions, etc.
-- For installing the respective language servers for your favorite languages, we use a manager named [Mason]() and for communicating with Neovim, [nvim-lspconfig]().  
+- For installing the respective language servers for your favorite languages, we use a manager named [Mason](https://github.com/williamboman/mason.nvim) and for communicating with Neovim, [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).  
   ![image](https://github.com/Aak54321/nvim-config/assets/128037309/57c72f6c-8b24-4218-aa1b-764269be33cf)
 
 ### Completion Engine (Like VSCode)
 
 - My configuration uses [nvm-cmp]() as the completion engine, with suggestions like VSCode from [friendly-snippets](). It acts as a pseudo LSP itself and gives suggestions for the language servers you've installed using Mason.  
   ![ezgif-7-781dbf4750](https://github.com/Aak54321/nvim-config/assets/128037309/ec5eb67f-292d-4237-ae1b-29296e811e8c)
+
+### Linting and Formating
+
+- Used [None-ls](https://github.com/nvimtools/none-ls.nvim) which communicates to the Formatters installed using Mason.
 
 ### [Lua-Line](https://github.com/nvim-lualine/lualine.nvim)
 
@@ -53,7 +57,7 @@
 
 - Provides bracket and auto-indentation functionality to the editor.
 
-### Alpha
+### [Alpha](https://github.com/goolord/alpha-nvim)
 
 - Adds a dashboard to the Neovim home page.
 - Use Any Text to ASCII Art Generator online and Change it to your way.
@@ -63,9 +67,9 @@
 
 ### Like the Configuration?
 
-Feel free to try it and give your suggestions and feedback.
+Feel free to try it and give your suggestions and feedback. 📝
 
-### Use Neovim!
+### Use $\color{blue}{\textsf{Neo}}$ $\color{Green}{\textsf{Vim}}$!
 
 It will help you code faster and more efficiently (💪 feel it after the initial struggles).
 
