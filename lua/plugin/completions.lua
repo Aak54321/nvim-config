@@ -1,24 +1,27 @@
 return {
   {
-    "hrsh7th/cmp-nvim-lsp"
+    "hrsh7th/cmp-nvim-lsp", -- Provides completion source for nvim-cmp
   },
   {
     "L3MON4D3/LuaSnip",
     dependencies = {
-      "saadparwaiz1/cmp_luasnip",
-      "rafamadriz/friendly-snippets",
+      "saadparwaiz1/cmp_luasnip", -- Provides LuaSnip support for nvim-cmp
+      "rafamadriz/friendly-snippets", -- Community-driven snippets
     },
   },
   {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require("cmp")
+      local luasnip = require("luasnip")
+
+      -- Load VSCode-style snippets
       require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.setup({
         snippet = {
           expand = function(args)
-            require("luasnip").lsp_expand(args.body)
+            luasnip.lsp_expand(args.body)
           end,
         },
         window = {
@@ -33,12 +36,13 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "luasnip" }, -- For luasnip users.
+          { name = "nvim_lsp" },  -- LSP source for completions
+          { name = "luasnip" },   -- Snippets source
         }, {
-          { name = "buffer" },
+          { name = "buffer" },    -- Buffer words source
         }),
       })
     end,
   },
 }
+
